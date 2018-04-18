@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  	<title>Wyvern Robotics</title>
+  	<title>Wyvern Robotics 6513</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/WRIcon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
@@ -15,6 +19,18 @@
 
     	p, a, h1, h2, h3, h4, h5, li{
     		color: #FFF;
+    	}
+
+    	h1{
+    		font-family: 'Roboto': 
+    	}
+
+    	.section-title{
+    		font-family: 'Josefin Sans';
+    	}
+
+    	.navbar li{
+    		font-family: 'Raleway';
     	}
 
   		.navbar{
@@ -34,7 +50,7 @@
   			position: fixed;
   			top: 0px;
   			width: 100%;
-  			z-index: 1;
+  			z-index: 16; /*higher than the carousel dots at 15*/
   		}
   		.navbar-brand{
   			float: left;
@@ -43,7 +59,7 @@
   		}
   		.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:hover, .navbar-inverse .navbar-nav .active a:focus{
   			color: #FFF;
-  			background-color: #D64143;
+  			background-color: rgba(0, 0, 0, 0.0);
   		}
   		.navbar-inverse .navbar-nav li a{
   			color: #D5D5D5;
@@ -117,6 +133,10 @@
 			text-decoration: underline;
 		}
 
+		.award-list{
+			padding-left:2em;
+		}
+
 		h3{
 			margin-top: 0;
 		}
@@ -152,8 +172,8 @@
 					<li><a href="#OurTeam">Our Team</a></li>
 					<li><a href="#Robots">Robots</a></li>
 					<li><a href="http://www.firstinspires.org" target="_blank">FIRST</a></li>
+					<li><a href="#History">History</a></li>
 					<li><a href="#Sponsors">Sponsors</a></li>
-					<li><a href="#Resources">Resources</a></li>
 					<li><a href="#Contact">Contact</a></li>
 				</ul>
 			</div>
@@ -181,7 +201,7 @@
 				<img src="img/Slides/Slide_2.jpg">
 				<div class="carousel-caption">
 					<div class="carousel-backing">
-						<h1>Check out the Robots the have built our students</h1>
+						<h1>Check out the Robots that built our students</h1>
 						<br>
 						<a href="#Robots" role="button" class="btn btn-default">Learn More</a>
 					</div>
@@ -205,7 +225,7 @@
 		<div class="row">
 			<h1 class="section-title">About Us</h1>
 			<div class="col-md-6">
-				<p><b>FIRST Team 6513 - Wyvern Robotics</b> is based out of Woodbridge College in Woodbridge, Ontario. We are the second <a href="www.firstinspires.org">FIRST Robotics</a> team in the York Region District School Board and one of thousands of teams around the world.</p>
+				<p><b>FIRST Team 6513 - Wyvern Robotics</b> is based out of Woodbridge College in Woodbridge, Ontario. We are the second <u><a href="www.firstinspires.org">FIRST Robotics</a></u> team in the York Region District School Board and one of thousands of teams around the world.</p>
 				<p>This is our second year competing in the FIRST Robotics Competition and this year we plan to push ourselves further in our pursuit of encouraging STEAM (Science, Technology, Engineering, Arts, and Math) education in the community, getting more students involoved in our school, and building the best robot we possibly can!</p>
 				<p>Wyvern Robotics is composed of students, teachers, and community mentors from many fields; all working together to build amazing robots. Students work together to solve problems and learn to use the knowledge gained in the classroom and apply it to a real-world project. This program sets students apart from the rest of the pack when preparing for post-secondary and the job market. In a way, the robots build the students.</p>
 				<h4>Our Mission</h4>
@@ -367,7 +387,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2 col-md-offset-5 text-center">
-				<button type="button" class="btn btn-default">View Full Roster</button>
+				<a href="roster.html" role="button" class="btn btn-default">View Full Roster</a>
 			</div>
 		</div>
 	</div>
@@ -379,7 +399,7 @@
 	<div class="container">
 		<h1 class="section-title">Robots</h1>
 		<h2>2017-2018 FIRST Robot</h2>
-		<h3>Spyro</h3>
+		<h3>SPYRO</h3>
 		<p>Spyro competed in the 2017-18 FIRST Robotics Competition challenge - FIRST PowerUp!</p>
 		<div class="videowrapper">
 			<iframe width="854" height="480" src="https://www.youtube.com/embed/HZbdwYiCY74" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -437,28 +457,114 @@
 		<br>
 		<div class="row">
 			<div class="col-md-2 col-md-offset-5 text-center">
-				<button type="button" class="btn btn-default">View All Past Robots</button>
+				<a href="robots.html" role="button" class="btn btn-default">View All Past Robots</a>
 			</div>
 		</div>
 	</div>
 	<hr class="half-rule"/>
 	<!--End Robots -->
 
+	<!--Start History -->
+	<span class="anchor" id="History"></span>
+	<div class="container">
+		<h1 class="section-title">History</h1>
+		<h3>2017-18</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<p><b>Robot Name: </b>Spyro</p>
+				<p><b>Challenge: </b><u><a href="https://www.youtube.com/watch?v=HZbdwYiCY74">FIRST PowerUp!</a></u></p>
+				<p><b>Team Captain(s): </b>Julian Curalli &amp; Brian Huynh</p>
+				<p><b>Competitions: </b></p>
+				<ul>
+					<li>Ontario District - Durham College Event</li>
+					<li>Ontario District - York University Event</li>
+				</ul>
+				<p><b>Awards: </b></p>
+				<div class="award-list">
+					<p><b>Ontario District Durham College Event</b></p>
+					<ul>
+						<li>Entrepreneurship Award sponsored by Kleiner Perkins Caufield and Byers</li>
+						<li>Advanced to Quarterfinals with FIRST Teams 1246 and 6070</li>
+					</ul>
+					<p><b>Ontario District York University Event</b></p>
+					<ul>
+						<li>Advanced to Semifinals with FIRST Teams 4946 and 5036</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="videowrapper">
+					<iframe width="854" height="480" src="https://www.youtube.com/embed/HZbdwYiCY74" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<h3>2016-17</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<p><b>Robot Name: </b>Hubert</p>
+				<p><b>Challenge: </b><u><a href="https://www.youtube.com/watch?v=EMiNmJW7enI">FIRST Steamworks</a></u></p>
+				<p><b>Team Captain(s): </b>Roaheen Mansuri</p>
+				<p><b>Competitions: </b></p>
+				<ul>
+					<li>Ontario District - Durham College Event</li>
+					<li>Ontario District - Georgian college Event</li>
+					<li>FIRST Ontario Provicial Championship</li>
+					<li>Fall Fiesta</li>
+				</ul>
+				<p><b>Awards: </b></p>
+				<div class="award-list">
+					<p><b>Ontario District Durham College Event</b></p>
+					<ul>
+						<li>Highest Rookie Seed Award</li>
+						<li>Advanced to Quarterfinals with FIRST Teams 2994 and 5428</li>
+					</ul>
+					<p><b>Ontario District Georgian College Event</b></p>
+					<ul>
+						<li>Highest Rookie Seed Award</li>
+						<li>Rookie Inspiration Award sponsored by National Instruments</li>
+						<li>Advanced to Quarterfinals with FIRST Teams 4618 and 4248</li>
+					</ul>
+					<p><b>Fall Fiesta</b></p>
+					<ul>
+						<li>Advanced to Quarterfinals with FIRST Teams 865 and 2994</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="videowrapper">
+					<iframe width="854" height="480" src="https://www.youtube.com/embed/EMiNmJW7enI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr class="half-rule"/>
+	<!--End History -->
+
 	<!--Start Sponsors -->
 	<span class="anchor" id="Sponsors"></span>
 	<div class="container">
 		<h1 class="section-title">Sponsors</h1>
+		<p>We rely heavily on the support of our gracious sponsors to run the team. Everything from building the robot to promoting STEAM education to the logistics of competing, gets paid for by donations from these wonderful people and organizations. We are forever greatful, so from all of us at Wyvern Robotics - THANK YOU for everything that do!</p>
+		<p>Below is a look at our sposnorship tiers:</p>
+		<ul>
+			<li><b>Premiere Sponsor</b> ~ $20,000+</li>
+			<li><b>Diamond Sponsor</b> ~ $5,000+</li>
+			<li><b>Gold Sponsor</b> ~ $2,500+</li>
+			<li><b>Silver Sponsor</b> ~ $1,000+</li>
+			<li><b>Bronze Sponsor</b> ~ $500+</li>
+			<li><b>Aluminum Sponsor</b> ~ $100+</li>
+		</ul>
+		<p>For more details on our sponsorship benefits and other related information download our <u><a href="2017-2018 Wyvern Robotics Sponsorship Info.pdf" target="_blank">Sponsorship Package</a></u></p>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5 text-center">
+				<a href="sponsors.html" role="button" class="btn btn-default">View All Sponsors</a>
+			</div>
+		</div>
 	</div>
 	<hr class="half-rule"/>
 	<!--End Sponsors -->
-
-	<!--Start Resources -->
-	<span class="anchor" id="Resources"></span>
-	<div class="container">
-		<h1 class="section-title">Resources</h1>
-	</div>
-	<hr class="half-rule"/>
-	<!--End REsources -->
 
 	<!--Start Contact -->
 	<span class="anchor" id="Contact"></span>
