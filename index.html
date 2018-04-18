@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  	<title>Wyvern Robotics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    	body{
+    		background-color: rgba(25, 111, 170, 1.0);
+    	}
+
+    	p, a, h1, h2, h3, h4, h5, li{
+    		color: #FFF;
+    	}
+
+  		.navbar{
+  			margin-bottom: 0;
+  			border-radius: 0;
+  			background-color: #D64143;
+  			background: 
+			linear-gradient(63deg, #D64143 23%, transparent 23%) 7px 0, 
+			linear-gradient(63deg, transparent 74%, #D64143 78%), 
+			linear-gradient(63deg, transparent 34%, #D64143 38%, #D64143 58%, transparent 62%), 
+			#d62a2a;
+			background-size: 16px 48px;
+  			color: #FFF;
+  			padding: 1% 0;
+  			font-size: 1.2em;
+  			border: 0;
+  			position: fixed;
+  			top: 0px;
+  			width: 100%;
+  			z-index: 1;
+  		}
+  		.navbar-brand{
+  			float: left;
+  			min-height: 55px;
+  			padding: 0 15px 5px;
+  		}
+  		.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:hover, .navbar-inverse .navbar-nav .active a:focus{
+  			color: #FFF;
+  			background-color: #D64143;
+  		}
+  		.navbar-inverse .navbar-nav li a{
+  			color: #D5D5D5;
+  		}
+  		.carousel-caption{
+  			top: 50%;
+  			transform: translateY(-50%);
+  			text-transform: uppercase;
+  		}
+
+  		.carousel-backing{
+  			padding-top: 1px;
+  			padding-bottom: 20px;
+  			background-color: rgba(25, 111, 170, 0.8);
+  			border-radius: 25px; 
+  		}
+
+  		.btn{
+  			font-size: 18px;
+  			color: #FFF;
+  			padding: 12px 22px;
+  			background: #D64143;
+  			border: 2px solid #ABC;
+  		}
+
+  		.img-generic{
+  			border-radius: 15px;
+  			width:100%;
+  		}
+
+  		.card-img-top{
+  			border-radius: 10px;
+  		}
+
+  		.half-rule{
+  			margin-left: 0;
+  			text-align: center;
+  			width: 90%;
+  		}
+  		.full-rule{
+  			margin-left: 0;
+  			text-align: center;
+  			width: 100%;
+  		}
+
+  		.anchor{
+  			display: block;
+  			height: 90px;	/*Same as nav height*/
+  			margin-top: -90px; /*Same as nav height*/
+  			visibility: hidden;
+  		}
+
+  		.videowrapper {
+    		float: none;
+    		clear: both;
+    		width: 100%;
+   			position: relative;
+    		padding-bottom: 56.25%;
+    		padding-top: 25px;
+    		height: 0;
+		}
+		.videowrapper iframe {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+		}
+
+		.section-title{
+			text-decoration: underline;
+		}
+
+		h3{
+			margin-top: 0;
+		}
+
+  		h5{
+  			font-weight: bold;
+  			font-size: 18px;
+  		}
+
+  		@media (max-width: 600px){
+  			.carousel-caption{
+  				display: none;
+  			}
+  		}
+
+    </style>
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar"> 
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/WyvernRobotics.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavBar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#AboutUs">About Us</a></li>
+					<li><a href="#OurTeam">Our Team</a></li>
+					<li><a href="#Robots">Robots</a></li>
+					<li><a href="http://www.firstinspires.org" target="_blank">FIRST</a></li>
+					<li><a href="#Sponsors">Sponsors</a></li>
+					<li><a href="#Resources">Resources</a></li>
+					<li><a href="#Contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="img/Slides/Slide_1.jpg">
+				<div class="carousel-caption">
+					<div class="carousel-backing">
+						<h1>Welcome to the home of Wyvern Robotics</h1>
+						<h2><i>FIRST&trade;</i> Team 6513</h2>
+						<br>
+						<a href="#AboutUs" role="button" class="btn btn-default">Learn More</a>
+					</div>
+				</div>
+			</div> <!--- End Active -->
+			<div class="item">
+				<img src="img/Slides/Slide_2.jpg">
+				<div class="carousel-caption">
+					<div class="carousel-backing">
+						<h1>Check out the Robots the have built our students</h1>
+						<br>
+						<a href="#Robots" role="button" class="btn btn-default">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Start Slider Control -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div> <!--- End Slider -->
+
+	<!--Start About Us -->
+	<span class="anchor" id="AboutUs"></span>
+	<div class="container">
+		<div class="row">
+			<h1 class="section-title">About Us</h1>
+			<div class="col-md-6">
+				<p><b>FIRST Team 6513 - Wyvern Robotics</b> is based out of Woodbridge College in Woodbridge, Ontario. We are the second <a href="www.firstinspires.org">FIRST Robotics</a> team in the York Region District School Board and one of thousands of teams around the world.</p>
+				<p>This is our second year competing in the FIRST Robotics Competition and this year we plan to push ourselves further in our pursuit of encouraging STEAM (Science, Technology, Engineering, Arts, and Math) education in the community, getting more students involoved in our school, and building the best robot we possibly can!</p>
+				<p>Wyvern Robotics is composed of students, teachers, and community mentors from many fields; all working together to build amazing robots. Students work together to solve problems and learn to use the knowledge gained in the classroom and apply it to a real-world project. This program sets students apart from the rest of the pack when preparing for post-secondary and the job market. In a way, the robots build the students.</p>
+				<h4>Our Mission</h4>
+				<p>FIRST Team 6513's mission is to educate students in the realms of STEAM.</p>
+				<p>We feel as though we've been given such an amazing apportunity to have teachers and community mentors who are supportive of our interest in STEAM and have given us much of their time and knowledge. We feel that we should take all of the things that we have been fortunate to learn and give younger students the same experience.</p>
+				<p>Under our Building Blocks Initiative (BBI), we plan to host Hours of Code in the communiyt, conduct presentaitons, and demonstrate how much fun learning about technology can be!</p>
+			</div>
+			<div class="col-md-6">
+				<img src="img/AboutUs.jpg" class="img-generic">
+			</div>
+		</div>
+	</div>
+	<hr class="half-rule"/>
+	<!--End About Us -->
+
+	<!--Start Our Team -->
+	<span class="anchor" id="OurTeam"></span>
+	<div class="container">
+		<div class="row">
+			<h1 class="section-title">Our Team</h1>
+			<h3>Executive Team</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Brian Huynh.jpg" alt="Brian Huynh" style="width:100%">
+					<div class="card-body">
+						<h5>Brian Huynh</h5>
+						<p>Business Captain</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Julian Curalli.jpg" alt="Julian Curalli" style="width:100%">
+					<div class="card-body">
+						<h5>Julian Curalli</h5>
+						<p>Mechanical Captain</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Philip Larbi.jpg" alt="Philip Larbi" style="width:100%">
+					<div class="card-body">
+						<h5>Philip Larbi</h5>
+						<p>Head of Logistics</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Gurdave Arora.jpg" alt="Gurdave Arora" style="width:100%">
+					<div class="card-body">
+						<h5>Gurdave Arora</h5>
+						<p>Co-Director of Business (Sponsorships)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Nile Wattoo.jpg" alt="Nile Wattoo" style="width:100%">
+					<div class="card-body">
+						<h5>Nile Wattoo</h5>
+						<p>Co-Director of Business (Finance)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Alessia Verna.jpg" alt="Alessia Verna" style="width:100%">
+					<div class="card-body">
+						<h5>Alessia Verna</h5>
+						<p>Co-Driector of BBI (Communications)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Mannat Galhotra.jpg" alt="Mannat Galhotra" style="width:100%">
+					<div class="card-body">
+						<h5>Mannat Galhotra</h5>
+						<p>Co-Director of BBI (Presentations)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Kelly Tran.jpg" alt="Kelly Tran" style="width:100%">
+					<div class="card-body">
+						<h5>Kelly Tran</h5>
+						<p>Co-Director of BBI (LEGO)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Andy Lieu.jpg" alt="Andy Lieu" style="width:100%">
+					<div class="card-body">
+						<h5>Andy Lieu</h5>
+						<p>Co-Director of Build</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Rishi Salwan.jpg" alt="Rishi Salwan" style="width:100%">
+					<div class="card-body">
+						<h5>Rishi Salwan</h5>
+						<p>Co-Director of Build</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Joyce Kim.jpg" alt="Joyce Kim" style="width:100%">
+					<div class="card-body">
+						<h5>Joyce Kim</h5>
+						<p>Media Director</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<br>
+			<h3>Mentors</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/John Gatti.jpg" alt="John Gatti" style="width:100%">
+					<div class="card-body">
+						<h5>John Gatti</h5>
+						<p>Teacher Mentor</p>
+						<p>Woodbridge College</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Harcourt Lorde.jpg" alt="Harcourt Lorde" style="width:100%">
+					<div class="card-body">
+						<h5>Harcourt Lorde</h5>
+						<p>Teacher Mentor</p>
+						<p>Woodbridge College</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<img class="card-img-top" src="img/Profiles/Martin Gagne.jpg" alt="Martin Gagne" style="width:100%">
+					<div class="card-body">
+						<h5>Martin Gagne</h5>
+						<p>Engineering Mentor</p>
+						<p>Toromont CAT</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5 text-center">
+				<button type="button" class="btn btn-default">View Full Roster</button>
+			</div>
+		</div>
+	</div>
+	<hr class="half-rule"/>
+	<!--End Our Team -->
+
+	<!--Start Robots -->
+	<span class="anchor" id="Robots"></span>
+	<div class="container">
+		<h1 class="section-title">Robots</h1>
+		<h2>2017-2018 FIRST Robot</h2>
+		<h3>Spyro</h3>
+		<p>Spyro competed in the 2017-18 FIRST Robotics Competition challenge - FIRST PowerUp!</p>
+		<div class="videowrapper">
+			<iframe width="854" height="480" src="https://www.youtube.com/embed/HZbdwYiCY74" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<img src="img/Spyro.jpg" class="img-generic">
+			</div>
+			<div class="col-md-6">
+				<h4>Drivetrain</h4>
+				<ul>
+					<li>Six wheel tank drive (rear and center powered, front idle)</li>
+					<li>Rear and center wheels are 5" Colson wheels with custom hex hubs, front are 4" Vex Omni for maneuverability</li>
+					<li>Powered by 4 CIMs (2 each side)</li>
+					<li>Custom riveted Vex Versa Chassis with gearbox integrated into rails</li>
+					<li>C-channel exterior rails make for easy bumper application and removal</li>
+					<li>Solid 1" aluminum bumper mounts add to the structural rigidity of the robot for climbing with 3 robots and do not add to the weight of the robot since the bumoers are weighed separately</li>
+				</ul>
+				<h4>Intake</h4>
+				<ul>
+					<li>Built for scoring in the switches and exchange</li>
+					<li>4 green AndyMark compliant wheels counter-rotate to grab the Power Cubes from any direction</li>
+					<li>Powered by BAG Motors with a 7:1 VersaPlanetary Lite Reduction</li>
+					<li>Arm lifted by a tow strap powered by 49:1 VersaPlanetary and 775Pro motor, lowered by gravity</li>
+					<li>Pneumatic cylinders with capped ends provide a linear "air spring" for the jaws to be able to freely open and accept the Power Cubes</li>
+				</ul>
+				<h4>Tower</h4>
+				<ul>
+					<li>Comprised of 2"x1" structural tube and 2"x1" C-channel, skateboard bearings</li>
+					<li>Independantly driven up and down for speed lift and power collapse. Speed lift - lifts the tower to grab onto the rungs, power-collapse - collapses the tower with very high torque to be able to lift 3 robots</li>
+					<li>Speed lift powered by a Mini CIM and 10:1 VersaPlanetary</li>
+					<li>PowerCollapse powered by 2 CIMs, 5:1 VersaPlanetary Gearbox, and 4:1 afterbox spur gear reduction</li>
+					<li>Tower extends through the middle of the rungs and fires 2 small pneumatic cylinders outward to latch onto the rungs</li>
+				</ul>
+				<h4>Wings</h4>
+				<ul>
+					<li>Once the tower is locked onto the rungs and the time reaches 30 seconds remaining, 2 pneumatic cylinders retract to release the wings</li>
+					<li>Wings fold down to be parallel to the floor</li>
+					<li>Stoppers on the chassis stop the wings from going too far</li>
+					<li>Wings are large enough for all sizes of robots drivetrains to drive on without issue</li>
+					<li>Platforms are intentionally cut away from the base of the robot to lock in the wheels of alliance robots</li>
+					<li>hinged ramps help alliance robots to climb the platforms</li>
+				</ul>
+				<h4>Control</h4>
+				<ul>
+					<li>4 autonomous modes selected during DisabledPeriodic (Drive Straight, Cube - Start Left, Cube - Start Right)</li>
+					<li>Encoders inform the robot of distance travelled</li>
+					<li>String pot gives position of intake arm and can is used for preset angles (Intake(Floor), Travel(Up), Shoot(Angled))</li>
+					<li>Manual mode for intake arm also available by moving the axis</li>
+					<li>Robot is controlled by 2 controlles. One for the drivebase and one for all auxiliary features</li>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5 text-center">
+				<button type="button" class="btn btn-default">View All Past Robots</button>
+			</div>
+		</div>
+	</div>
+	<hr class="half-rule"/>
+	<!--End Robots -->
+
+	<!--Start Sponsors -->
+	<span class="anchor" id="Sponsors"></span>
+	<div class="container">
+		<h1 class="section-title">Sponsors</h1>
+	</div>
+	<hr class="half-rule"/>
+	<!--End Sponsors -->
+
+	<!--Start Resources -->
+	<span class="anchor" id="Resources"></span>
+	<div class="container">
+		<h1 class="section-title">Resources</h1>
+	</div>
+	<hr class="half-rule"/>
+	<!--End REsources -->
+
+	<!--Start Contact -->
+	<span class="anchor" id="Contact"></span>
+	<div class="container">
+		<div class="row">
+	  		<div class="col-md-6">
+	  			<h1 class="section-title">Contact</h1>
+	  			<p>We would love to hear from you!</p>
+		        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Woodbridge, ON Canada</p>
+		        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 905.851.2843 ext.130</p>
+		     	<p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: wyvernrobotics@gmail.com</p>
+		      	<br>
+		      	<form action="none" method="post" enctype="text/plain" target="_blank">
+		        	<p><input class="form-control" type="text" placeholder="Name" required name="Name"></p>
+		        	<p><input class="form-control" type="text" placeholder="Email" required name="Email"></p>
+		        	<p><input class="form-control" type="text" placeholder="Subject" required name="Subject"></p>
+		        	<p><input class="form-control" type="text" placeholder="Message" required name="Message"></p>
+		        	<p><button class="btn btn-default" type="submit"><i class="fa fa-paper-plane"></i> SEND MESSAGE</button></p>
+		      	</form>
+			</div>
+		    <div class="col-md-6">
+		      <!-- Add Google Maps -->
+		    	<div id="googleMap" style="width:100%; height:524px;"></div>
+		    </div>
+		</div>
+  	</div>
+
+	<!-- Add the google map -->
+  	<script>
+		function myMap()
+		{
+		  	myCenter=new google.maps.LatLng(43.779737, -79.580615);
+		  	var mapOptions= {
+		    	center:myCenter,
+		    	zoom:12, scrollwheel: false, draggable: false,
+		    	mapTypeId:google.maps.MapTypeId.ROADMAP
+		  	};
+		  	var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+		  	var marker = new google.maps.Marker({
+		    	position: myCenter,
+		  	});
+		  	marker.setMap(map);
+		}
+  	</script>
+  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCBc75ZsD65k9vtuQxNsWsMJWm4M777K8&callback=myMap"></script>
+	</div>
+	<!--End Contact -->
+	<hr class="full-rule"/>
+	<div class="container">
+		<div class="row">
+			<p class="text-center">Last Updated: 18/04/2018</p>
+		</div>
+	</div>
+</body>
+<!--End Body -->
+</html>
+<!--End File -->
